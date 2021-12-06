@@ -1,9 +1,9 @@
 ## Demo
 
->1. [Java NumberFormat使用](https://geek-docs.com/java/java-tutorial/numberformat.html
+> 注意:类中的链接表明一般，这里的链接表示较好
+1. [Java NumberFormat使用](https://geek-docs.com/java/java-tutorial/numberformat.html
 )
->2. [NIO从入门到踹门](https://mp.weixin.qq.com/s/GfV9w2B0mbT7PmeBS45xLw?spm=a2c6h.12873639.0.0.53064a610IXTcN)
-
+2. [NIO从入门到踹门](https://mp.weixin.qq.com/s/GfV9w2B0mbT7PmeBS45xLw?spm=a2c6h.12873639.0.0.53064a610IXTcN)
 
 1. nio
 
