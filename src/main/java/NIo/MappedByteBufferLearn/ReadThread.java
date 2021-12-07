@@ -16,11 +16,17 @@ public class ReadThread extends Thread {
     private int thredId;
 
     ReadThread(int thredId) {
+        super("aaaaa");
         this.thredId = thredId;
     }
 
     @Override
     public void run() {
+        try {
+            Thread.sleep(100000000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         RandomAccessFile raf;
         FileChannel fChannel;
         MappedByteBuffer byteBuffer;
