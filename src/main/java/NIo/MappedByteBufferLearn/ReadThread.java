@@ -23,7 +23,7 @@ public class ReadThread extends Thread {
     @Override
     public void run() {
         try {
-            Thread.sleep(100000000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -43,7 +43,7 @@ public class ReadThread extends Thread {
                             file = new File(pathname);
                         }
                     }
-                    raf = new RandomAccessFile(pathname, "r");
+                    raf = new RandomAccessFile("testFile/"+pathname, "r");
                     fChannel = raf.getChannel();
                     byteBuffer = fChannel.map(FileChannel.MapMode.READ_ONLY, 0,
                             raf.length());

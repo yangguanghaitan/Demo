@@ -30,7 +30,7 @@ public class WriteThread extends Thread {
             long fileLength = 0L;
             MappedByteBuffer buffer;
             try {
-                file = new RandomAccessFile(  fileName + ".tmp", "rw");
+                file = new RandomAccessFile(  "testFile/"+fileName + ".tmp", "rw");
                 fChannel = file.getChannel();
                 //文件内存映射
                 buffer = fChannel.map(FileChannel.MapMode.READ_WRITE, fileLength, bytes.length);
