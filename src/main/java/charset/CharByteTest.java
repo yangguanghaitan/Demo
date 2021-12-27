@@ -1,4 +1,4 @@
-//package string;
+package charset;//package string;
 
 public class CharByteTest {
 
