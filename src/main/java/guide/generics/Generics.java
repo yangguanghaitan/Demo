@@ -1,4 +1,4 @@
-package guide;
+package guide.generics;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
