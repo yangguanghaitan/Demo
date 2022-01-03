@@ -3,7 +3,8 @@ package guide.reference;
 import java.util.ArrayList;
 import java.util.List;
 
-//java只有值引用
+//java只有值引用，如果是引用类型，传递的只是地址值的拷贝，不会对原本数据产生影响
+//                如果是基本类型，传递的是值的字面量的拷贝
 public class ValueReference {
 
     public static void main(String[] args) {
