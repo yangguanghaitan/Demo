@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * @Auther d
  * @Date 2022/1/7 2:05
- * @Describe
+ * @Describe 一个简单的线程池: 线程池的饱和策略:{@link java.util.concurrent.RejectedExecutionHandler}
  **/
 public class ThreadPoolExecutorDemo {
 
