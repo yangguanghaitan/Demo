@@ -2,6 +2,7 @@ package guide.concurrent.threadPool;
 
 
 import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.RejectedExecutionHandler;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
@@ -9,6 +10,8 @@ import java.util.concurrent.TimeUnit;
  * @Auther d
  * @Date 2022/1/7 2:05
  * @Describe 一个简单的线程池: 线程池的饱和策略:{@link java.util.concurrent.RejectedExecutionHandler}
+ *           提交任务:第一先用核心线程{@code CORE_POOL_SIZE}处理，第二加入队列{@code QUEUE_CAPACITY}，
+ *           第三扩展最大线程{@code MAX_POOL_SIZE}如果满了包和策略{@link RejectedExecutionHandler}
  **/
 public class ThreadPoolExecutorDemo {
 
