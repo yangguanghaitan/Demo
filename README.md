@@ -10,14 +10,7 @@
 ### 2.学习记录
 1. boolean sun.misc.Unsafe#compareAndSwapObject、compareAndSwapInt、compareAndSwapLong执行有可能为false,
    原子类能成功,是通过do{}while()结构保证的。
-   
-   
-
-
-1. s
-2. dio
-3. sfj
-
+2. 成员变量基本数据类型是由默认值的，对应的包装类型默认值为null，引用类型默认值为null；成员变量（基本以及对应的包装类型或引用）必须显示赋值否则报错***Variable 'ddd' might not have been initialized***。
 
 - j
 
