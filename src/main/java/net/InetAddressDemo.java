@@ -10,7 +10,7 @@ import java.util.Enumeration;
  * @Date 2022/2/6 15:32
  * @Describe 测试网络类，ping命令获取索引:netsh int ipv4 show interfaces{@code mac1}
  **/
-public class Address {
+public class InetAddressDemo {
     public static void main(String[] args) throws IOException {
         InetAddress address = InetAddress.getByName("192.168.1.123");
         //获取主机名
