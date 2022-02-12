@@ -35,6 +35,13 @@
             <artifactId>cglib</artifactId>
             <version>3.3.0</version>
         </dependency>
+<!--        测试hutoll工具类-->
+<!--        测试hutoll http工具类-->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-http</artifactId>
+            <version>5.7.20</version>
+        </dependency>
     </dependencies>
 
 
