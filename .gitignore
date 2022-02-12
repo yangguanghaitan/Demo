@@ -23,3 +23,6 @@
 hs_err_pid*
 /target/
 .idea/
+/src/main/resources/flowchart.js
+/.idea/
+/src/main/resources/aa.txt

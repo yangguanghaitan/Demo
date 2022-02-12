@@ -3,6 +3,7 @@ package File;
 import utils.Tools;
 
 import java.io.*;
+import java.net.InetAddress;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -16,6 +17,8 @@ import java.time.format.DateTimeFormatter;
 public class FileTest {
     public static void main(String[] args) throws IOException {
         File file=new File("D:\\AAAA\\ccccc\\aa.txt");
+        InputStream resourceAsStream = FileTest.class.getResourceAsStream("/aa.txt");
+        System.out.println(resourceAsStream.available());
         FileOutputStream out=new FileOutputStream(file,true);
         out.write("1234".getBytes("gbk"));
         out.write("6666".getBytes("gbk"));

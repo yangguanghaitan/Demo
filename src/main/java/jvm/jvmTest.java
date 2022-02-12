@@ -1,17 +1,16 @@
+package jvm;
+
 import java.io.UnsupportedEncodingException;
 import java.net.Inet6Address;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
-import java.net.Socket;
 import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentMap;
 
 
 public class jvmTest {
     public static void main(String[] args) throws UnsupportedEncodingException {
-//        System.out.println(SubClass.valuek);
-//        SuperClass[] superClasses=new SuperClass[10];
+//        System.out.println(jvm.SubClass.valuek);
+//        jvm.SuperClass[] superClasses=new jvm.SuperClass[10];
 
         byte[] b=new byte[]{  72, 101, 108, 108, 111, 32, 82, 111, 99, 107, 101, 116, 77, 81, 32, 48};
         String st=new String(b);
@@ -110,7 +109,7 @@ public class jvmTest {
 
 class SuperClass {
     static {
-        System.out.println("SuperClass init");
+        System.out.println("jvm.SuperClass init");
     }
 
     public static int value = 123;
@@ -118,7 +117,7 @@ class SuperClass {
 
 class SubClass extends SuperClass {
     static {
-        System.out.println("SubClass init");
+        System.out.println("jvm.SubClass init");
     }
 
     public static int valuek = 123;
