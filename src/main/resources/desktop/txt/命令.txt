@@ -1,0 +1,81 @@
+1，查看端口号 netstat -aon|findstr "1234"（linux）或者netstat -lanp | grep 6379，win 杀死端口号  taskkill /T /F /PID 15660
+     查看进程 ps -aux | grep redis
+     刷新文件 source /etc/profile
+     根据名字查找文件 find . -name  "*.c" 
+2，mvn clean install -Dmaven.test.skip=true下载安装依赖，跳过测试
+3，https://www.linuxprobe.com/basic-learning-04.html  4.1.3 配置网卡信息配置网卡信息，4.1.4 配置软件仓库 dnf命令可以用，yum命令不可以用
+4，systemctl status sshd，systemctl start sshd， systemctl stop sshd，systemctl restart sshd
+5，网络文件配置地址/etc/sysconfig/network-scripts，重启网卡 nmcli connection reload ens160（网卡名），nmcli c reload，nmcli c up xxx ，更改配置后要重启网卡 service network restart（版本7可用）
+    查看网卡信息 -nmcli connection ,显示具体的网络接口信息-nmcli connection show xxx, 显示所有活动连接-nmcli connection show --active ,删除一个网卡连接-nmcli     connection delete xxx，
+5，本机IP  192.168.1.114，虚拟机 192.168.101.101/100
+6，du -sh 文件名/目录  显示文件、目录的大小（KB，MB）
+7,jdk下生成ws客户端  
+wsimport  -encoding utf-8 -keep -s D:\AAAA -p com.webservice.asmx_airLines_client -verbose  C:\Users\dong\Desktop\DomesticAirline.xml
+8，curl --header "content-type: text/xml" -d @request.xml http://localhost:8080/ws curl发送参数
+9,mvn archetype:generate  "-DarchetypeGroupId=org.springframework.ws" "-DarchetypeArtifactId=spring-ws-archetype" "-DarchetypeVersion=" "-DgroupId=com.mycompany.hr" -DartifactId=holidayService"
+10，本机公网ip 123.121.167.112，命令curl ipinfo.io
+
+#########################################jvm
+
+
+
+#########################################linux
+1，zookeeper启动，状态：zkServer.sh start/stop，zkServer.sh status，zkCli.sh连接客户端，默认端口：2181
+2，启动/状态/停止/禁用： systemctl start/status/disable/stop    firewalld 或者 状态:firewall-cmd --state
+3，启动：consul agent -dev，首页http://localhost:8500
+4，nacos启动: cmd startup.cmd -m standalone 
+5，mysql启动/关闭:sudo  systemctl start/stop mysqld,激活mysqld服务：systemctl enable --now mysqld，
+      状态查询:sudo systemctl status mysqld,是否安装:rpm -qa|grep mysql，mysql通过rpm方式安装
+      mysql -uroot -p12345678
+6，nginx，地址http://192.168.101.100:8090/，查看nginx进程:ps -ef | grep nginx,启动 ./nginx  ,关闭 ./nginx -s stop，重启  ./nginx -s reload 
+
+
+
+#################################
+1，linux：mysql密码12345678
+
+
+########git命令
+1，git init
+2，git remote add origin  https://github.com/yangguanghaitan/Hello-WorldGit.git， origin为远程仓库的名字
+3，
+
+
+
+###############idea修改项目名字
+1，找到磁盘根目录修改名字
+2，重新打开文件
+3,  shift+F6,修改项目文件名
+4，修改pom.xml文件的项目名字
+5，有子项目的，修改子项目的依赖名字。
+
+###########本地与远程（一定，提交的时候现拉取最新代码，解决冲突，在提交）
+第一种方法:操作没有错误
+准备:本地新建一个项目，远程github上新建一个仓库，（复制github地址）
+1，VCS -> Import into Version Control -> Create Git Repository -> 在弹框中会自动选中我们的项目
+2，cvs-git-remotes绑定远程仓库地址（复制github地址），然后idea右下角，刷新出来远程分支，也可以cvs-git-branches 刷新效果一样，有可能会慢一些。
+3，右键项目根目录，git-Repository-pull.拉取远程文件，就会成功。有可能会慢一些。
+4，就可以提交自己的代码了。
+第二种方法:
+准备，1，2步和第一种方法一样
+3，选中需要提交的文件，右键git-add-commit
+4,   push,注意要选对远程分支
+5，这时出现 [rejected] (non-fast-forward)
+     原因在于：git仓库中已经有代码，所以它不允许你直接把你的代码覆盖上去。于是有2种方法：
+    5.1 强推，即利用强覆盖方式用你本地的代码替代git仓库内的内容
+        git push -f（不行）
+     5.2，先把git的东西fetch到你本地然后merge后再push
+           $ git fetch
+           $ git merge
+           这2句命令等价于
+          $ git pull，就是第一种方法的第三步。 
+6，执行git pull时，出错fatal: refusing to merge unrelated histories，大概意思是拉取的时候不允许本地有commit或者add的文件。
+         两种方法解决:
+          6.1 手动进入到git命令，敲 git pull origin master --allow-unrelated-histories（推荐）
+          6.2 取消commit和add，使文件变为红色.
+7,现在可以提交自己的代码了。
+
+
+
+
+

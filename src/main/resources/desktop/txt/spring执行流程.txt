@@ -1,0 +1,5 @@
+1，WebMvcAutoConfiguration（加载静态资源路径以及映射pattern前缀）
+     1.1 WelcomePageHandlerMapping
+      1.2 HiddenHttpMethodFilter
+3，DispatcherServlet-》--》》doService()-->>doDispatch（）-->getHandler()-->getHandlerAdapter()-->handle()
+4，springboot参数处理原理,26个方法参数解析器，15个返回值处理器

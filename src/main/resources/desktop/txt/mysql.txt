@@ -1,0 +1,58 @@
+1，分类后求最大值的详细信息:
+SELECT a.id,a.uid, a.ip, a.login_time
+FROM 
+(SELECT uid, max(login_time) login_time
+FROM tb
+GROUP BY uid
+) b JOIN tb a ON a.uid = b.uid AND a.login_time = b.login_time;
+2，，InnoDB存储引擎，自增列必须是索引，同时必须是索引的第一个列，如果不是第一个列，会抛出异常，而MyiSAM不会有这个问题。？？？？？自增列需要定义为主键，可以理解为主键即是索引
+3，InnoDB存储引擎下，必须有主键，select_rowid from zz;_rowid取主键的值。显示索引:show index from `user`;
+#################mysql命令(严格管理分号)
+显示数据库 SHOW DATABASES;
+创建数据库 CREATE DATABASE userMybatisPlus;
+切换数据库 USE usermybatisplus; 
+正在使用的数据库 SELECT DATABASE();
+正在使用的表 SHOW TABLES;
+显示表的结构  DESCRIBE TABLENAME；  
+显示表的索引 SHOW INDEX FROM tbl_name;
+显示表的信息 show table status\G;
+显示sql语句 SHOW CREATE TABLE shirt\G
+
+
+登录 mysql -h host -u user -p
+退出 quit
+默认升序 DESC降序;
+
+
+函数:
+版本,日期;日期时间;用户 : VERSION(),CURRENT_DATE;NOW();USER(); 
+日期相减取其年数: select (YEAR(CURDATE())-YEAR('1998-11-04'));
+求下个月的生日():MOD(MONTH(CURDATE()), 12) + 1;MOD(a,b)表示a%b；
+日期提取函数: YEAR( )、MONTH( )和DAYOFMONTH( )。
+右边截取字符串: SELECT RIGHT('foobarbar', 4);=>rbar 
+退出执行: \c
+
+
+
+
+
+
+
+
+长的sql语句
+把数据库权限授予某个用户: GRANT ALL ON menagerie.* TO 'your_mysql_name'@'your_client_host';(报错百度)
+
+记录:（新东西）
+1,  3.3.3 .实现将文本文件“pet.txt”装载到pet表中。LOAD DATA LOCAL INFILE '/path/pet.txt' INTO TABLE pet;
+2,  BINARY强制执行区分大小写排序 ORDER BY BINARY col_name;
+3,  5>6为0，5<6为1.
+4 , 3.5. 在批处理模式下使用mysql:命令放到文件中，执行文件。
+
+解惑
+1, 1989年以后，要大于1989；
+注意
+1, 计算年龄不到一岁。年份相减不可以。
+2, 因为NULL是特殊值，查询使用death IS NOT NULL而非death != NULL，death是date类型；NULL意味着“没有值”或“未知值",
+   不能使用=、<或!=和算数运算符，而是使用使用IS NULL和IS NOT NULL，mysql种0或者NULL意味着假；GROUP BY中，两个
+    NULL值视为相同，ORDER BY ... DESC，则NULL值出现在最后面;可以在定义为NOT NULL的列内插入0或空字符串，实际是NOT NULL。
+3,
