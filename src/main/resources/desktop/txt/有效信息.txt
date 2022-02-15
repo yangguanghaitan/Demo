@@ -1,0 +1,11 @@
+1，https://yangguanghaitan.github.io/  指定仓库名，到达指定页面；
+2，https://yangguanghaitan.github.io/Hello-World/  到达指定仓库Hello-World
+3，非阻塞的事件驱动处理引擎：epoll
+7,StampedLock类 它同样支持读写锁，就像上面的例子那样。与ReadWriteLock不同的是，StampedLock的锁方法会返回表示为long的标记。你可以使用这些标记来释放锁，或者检查锁是否有效。此外，StampedLock支持另一种叫做乐观锁（optimistic locking）的模式。
+8，并发API也支持计数的信号量。不过锁通常用于变量或资源的互斥访问，信号量可以维护整体的准入许可。这在一些不同场景下，例如你需要限制你程序某个部分的并发访问总数时非常实用。
+9，springboot事务的范围比锁的范围较大，导致事务未提交，加锁的代码已经执行完了，在进来一个事务将会导致数据库脏读，解决方法 扩大锁的范围。
+10，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    token
+12，spring bean生命周期：初始化方法InitializingBean.afterPropertiesSet()在对象的set方法和aware接口方法完成后即属性填充后执行，
+                                          BeanPostProcessor接口方法postProcess Before/AfterInitialization在对象InitializingBean.afterPropertiesSet()方法执行前后执行
+                                          InstantiationAwareBeanPostProcessor的方法postProcessBeforeInstantiation/postProcessAfterInstantiation在类的构造器方法前后执行 
+                                          aware接口在初始化之前，实例化之后，和类的set方法一起执行。

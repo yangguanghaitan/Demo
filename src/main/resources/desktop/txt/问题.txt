@@ -1,0 +1,27 @@
+1，相对路径读取类路径下的xml文件。
+3，mvn archetype:create 。根据已有项目创建一个以后使用的模板
+4，打印日志。spring boot https://docs.spring.io/spring-ws/docs/current/reference/html/#logging
+5，JavaJMS 是什么，与spring jms的关系，Resource对象的使用。
+6，spring framework，4.1.1
+7，java_first_spring_support 运行失败:http://cxf.apache.org/docs/writing-a-service-with-spring.html
+8， SLF4J日志接口，Logback 和Log4J是日志实现。#TRACE->DEBUG->INFO->WARN->ERROR
+9，，HttpMessageConverter sspring中消息转换器
+//javaGuide
+10.《LinkedHashMap 源码详细分析（JDK1.8）》:https://www.imooc.com/article/22931
+11.通过源码一步一步分析 ArrayList 扩容机制:https://snailclimb.gitee.io/javaguide/#/docs/java/collection/arraylist-source-code?id=_2-arraylist-%e6%a0%b8%e5%bf%83%e6%ba%90%e7%a0%81%e8%a7%a3%e8%af%bb
+11.1 并发容器之BlockingQueue: https://juejin.cn/post/6844903602444582920,https://javadoop.com/post/java-concurrent-queue
+12Java8 新特性:https://mp.weixin.qq.com/s/ojyl7B6PiHaTWADqmUq2rw1
+13.容器-》源码分析
+14,Java锁与线程的那些事 https://tech.youzan.com/javasuo-yu-xian-cheng-de-na-xie-shi/
+15，Java6 及以上版本对 synchronized 的优化:https://www.cnblogs.com/wuqinglong/p/9945618.html
+16，AQS 原理和相关源码分析的文章： https://www.cnblogs.com/waterystone/p/4920797.html                                                           https://www.cnblogs.com/chengxiao/archive/2017/07/24/7141160.html
+16.1一行一行源码分析清楚 AbstractQueuedSynchronizer https://www.javadoop.com/post/AbstractQueuedSynchronizer-2
+16.2https://www.cnblogs.com/waterystone/p/4920797.html,https://www.cnblogs.com/chengxiao/p/7141160.htmlJava并发之AQS详解 
+
+17.Java线程池实现原理及其在美团业务中的实践:https://tech.meituan.com/2020/04/02/java-pooling-pratice-in-meituan.html
+17.1如何设置线程池参数？美团给出了一个让面试官虎躯一震的回答:https://mp.weixin.qq.com/s?__biz=Mzg3NjU3NTkwMQ==&mid=2247505103&idx=1&sn=a041dbec689cec4f1bbc99220baa7219&source=41#wechat_redirect
+18，https://tech.meituan.com/2019/12/05/aqs-theory-and-apply.html 从ReentrantLock的实现看AQS的原理及应用
+19,https://javaguide.cn/java/concurrent/threadlocal/ 万字解析 ThreadLocal 关键字
+20,https://javaguide.cn/java/concurrent/completablefuture-intro/ CompletableFuture入门
+
+
