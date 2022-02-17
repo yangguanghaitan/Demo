@@ -1,4 +1,4 @@
-package patterns.observe.event;
+package patterns.observe.event01;
 
 import java.util.EventListener;
 
