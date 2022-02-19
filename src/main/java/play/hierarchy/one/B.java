@@ -1,4 +1,4 @@
-package play;
+package play.hierarchy.one;
 
 /**
  * @Auther d
@@ -7,6 +7,10 @@ package play;
  **/
 public class B extends A{
     public B() {
+        this(8);
         System.out.println("B的空参构造器");
+    }
+    public B(int a){
+        System.out.println("B的有参构造器");
     }
 }
