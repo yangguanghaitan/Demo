@@ -7,5 +7,5 @@ package patterns.observe.event02;
  **/
 public class MethodExecutionStatus {
     public static final String BEGIN="begin";
-    public static final String END="begin";
+    public static final String END="end";
 }
