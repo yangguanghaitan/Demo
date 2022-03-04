@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script type="text/javascript" src="./chart.min.js"></script>
+    <script type="text/javascript" src="js/chart.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.6.0.js"></script>
 </head>
 <canvas id="myChart" width="400" height="400"></canvas>
 <script>
@@ -42,6 +43,14 @@
             }
         }
     });
+    console.log(11);
+    jQuery.support.cors = true;
+    var request = new XMLHttpRequest();
+    request.open('GET', 'http://www.baidu.com/', false);
+    request.send(null);
+    if (request.status === 200) {
+        console.log(request.responseText);
+    }
 </script>
 <body>
 
