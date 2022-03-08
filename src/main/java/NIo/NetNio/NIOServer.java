@@ -38,6 +38,8 @@ public class NIOServer {
                 SelectionKey selectionKey = it.next();
                 //判断如果是连接事件
                 if (selectionKey.isAcceptable()) {
+                    //根据key获取服务器通道
+                    ServerSocketChannel serverSocketChannel1 = (ServerSocketChannel) selectionKey.channel();
                     //服务器与客户端建立连接，获取socketChannel
                     SocketChannel socketChannel = serverSocketChannel.accept();
                     //设置成非阻塞

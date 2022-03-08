@@ -10,6 +10,8 @@ public class NIOClient {
         InetSocketAddress address = new InetSocketAddress("127.0.0.1", 6666);
         socketChannel.configureBlocking(false);
         //连接服务器
+        // 服务器判断是一个selectionKey.isAcceptable()的请求，
+        // 随机向服务器的selector注册一个SelectionKey.OP_READ的通道
         boolean connect = socketChannel.connect(address);
         //判断是否连接成功
         if(!connect){
