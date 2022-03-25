@@ -1,8 +1,7 @@
-package queue;
+package guide.collection.queue;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
-import java.util.concurrent.DelayQueue;
 
 public class QueueTest {
     public static void main(String[] args) {
