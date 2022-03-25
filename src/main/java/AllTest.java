@@ -1,10 +1,8 @@
 
 import cn.hutool.http.GlobalHeaders;
-import cn.hutool.http.Header;
 
-import java.io.InputStream;
-import java.net.InetAddress;
-import java.net.URL;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * @author d
@@ -15,9 +13,6 @@ public class AllTest {
 
 
     public static void main(String[] args) throws Exception {
-        /*System.out.println(6 >> 1);//110->011->3
-        System.out.println((36&1)==0);//都为1才是1 true
-        System.out.println((3|5)==7);//都为0才是0  true*/
 
       /*  RandomAccessFile rw = new RandomAccessFile(new File("asd.txt"), "rw");
         FileChannel channel = rw.getChannel();
@@ -27,7 +22,7 @@ public class AllTest {
         byte aa=90;//P
         map.put(5,aa);*/
 
-   /*     Thread.currentThread().interrupt();
+       /*     Thread.currentThread().interrupt();
         System.out.println(Thread.interrupted());
         System.out.println(9090);
         int a=7/0;
@@ -63,6 +58,47 @@ public class AllTest {
     }
 
 
+
+
+    /**
+     * @author d
+     * @date 2022/3/25 17:08
+     * @Describe 位运算
+     **/
+    public static void dd() {
+        System.out.println(6 >> 1);//110->011->3
+        System.out.println((36 & 1) == 0);//都为1才是1 true
+        System.out.println((3 | 5) == 7);//都为0才是0  true
+        System.out.println(1 << 4);//2的4次幂
+        System.out.println(1 << 30);//2的30次幂
+
+
+    }
+
+
+    /**
+     * @author d
+     * @date 2022/3/25 17:06
+     * @Describe 正则
+     **/
+    public static void cc() {
+        Pattern p = Pattern.compile("^([A-Za-z0-9_\\-\\.])+\\@([A-Za-z0-9_\\-\\.])+\\.([A-Za-z]{2,4})$");
+        Matcher m = p.matcher("zhangsan-001@gmail.com");
+        boolean result = m.matches();
+        System.out.println(result);
+    }
+
+    /**
+     * @author d
+     * @date 2022/3/25 17:05
+     * @Describe null的!=判断
+     **/
+    public static void bb() {
+        String str=null;
+        System.out.println(str != null);
+        System.out.println(null != str);
+    }
+
     /**
      * @author d
      * @date 2022/1/11 1:53
@@ -77,7 +113,7 @@ public class AllTest {
                 continue retry; //本次循环，继续下次循环
             }
             if (i == 2)
-              break retry;//跳出循环，往下执行
+                break retry;//跳出循环，往下执行
 
         }
         System.out.println(99);
