@@ -1,8 +1,13 @@
-package log;
+package basic.log;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @Auther d
+ * @Date 2022/3/26 17:01
+ * @Describe 日志框架的使用
+ **/
 public class HelloWorld {
     public static void main(String[] args) {
         Logger logger = LoggerFactory.getLogger(HelloWorld.class);

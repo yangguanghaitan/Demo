@@ -1,5 +1,10 @@
-package charset;//package string;
+package basic.charset;//package string;
 
+/**
+ * @Auther d
+ * @Date 2022/3/26 17:01
+ * @Describe 字符集编码
+ **/
 public class CharByteTest {
 
     public static void main(String[] args) throws Exception {

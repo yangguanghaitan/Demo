@@ -1,7 +1,12 @@
-package serialize;
+package basic.serialize;
 
 import java.io.*;
 
+/**
+ * @Auther d
+ * @Date 2022/3/26 17:01
+ * @Describe Transient关键字的使用
+ **/
 public class TransientTest {
     public static void main(String[] args) {
 
