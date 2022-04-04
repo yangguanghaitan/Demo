@@ -10,6 +10,7 @@ import java.util.Arrays;
 public class RemoteControl {
     Command[] onCommands;
     Command[] offCommands;
+    Command undoComannd;
 
     //遥控器3个卡槽的出厂默认值
     public RemoteControl() {
@@ -20,6 +21,7 @@ public class RemoteControl {
             onCommands[i]=noCommand;
             offCommands[i]=noCommand;
         }
+        undoComannd=noCommand;
     }
 
     /**
@@ -37,10 +39,16 @@ public class RemoteControl {
 
     public void onButtonWasPressed(int slotIndex){
         onCommands[slotIndex].execute();
+        undoComannd=onCommands[slotIndex];
     }
 
     public void offButtonWasPressed(int slotIndex){
         offCommands[slotIndex].execute();
+        undoComannd=offCommands[slotIndex];
+    }
+
+    public void undoButtonWasPressed(){
+        undoComannd.undo();
     }
 
     /**
@@ -56,6 +64,7 @@ public class RemoteControl {
         for (int i = 0; i < onCommands.length; i++) {
             stringBuffer.append("slot index="+i+"  "+onCommands[i].getClass().getName()+"  "+offCommands[i].getClass()+"\n");
         }
+        stringBuffer.append("undo"+undoComannd.getClass());
         return stringBuffer.toString();
     }
 }

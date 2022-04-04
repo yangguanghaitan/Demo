@@ -32,6 +32,8 @@ public class RemoteControlDemo {
 
         //遥控器
         RemoteControl remoteControl=new RemoteControl();
+        System.out.println(remoteControl);
+
         //为每个卡槽指定对应的命令
         remoteControl.setCommand(0,lightOnCommand,lightOffCommand);
         remoteControl.setCommand(1,garageDoorOnCommand,garageDoorOffCommand);
@@ -48,6 +50,7 @@ public class RemoteControlDemo {
         remoteControl.onButtonWasPressed(2);
         remoteControl.offButtonWasPressed(2);
 
-
+        System.out.println(remoteControl);
+        remoteControl.undoButtonWasPressed();
     }
 }

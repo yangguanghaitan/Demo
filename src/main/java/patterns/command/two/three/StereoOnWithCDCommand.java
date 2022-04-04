@@ -22,4 +22,9 @@ public class StereoOnWithCDCommand implements Command {
         //设置音量
         stereo.setVolume(18);
     }
+
+    @Override
+    public void undo() {
+        stereo.off();
+    }
 }
