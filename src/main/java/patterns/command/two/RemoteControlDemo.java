@@ -1,5 +1,9 @@
 package patterns.command.two;
 
+import patterns.command.two.four.CeilingFan;
+import patterns.command.two.four.CeilingFanHighOnComannd;
+import patterns.command.two.four.CeilingFanLowOnComannd;
+import patterns.command.two.four.CeilingFanOffOnComannd;
 import patterns.command.two.one.Light;
 import patterns.command.two.one.LightOffCommand;
 import patterns.command.two.one.LightOnCommand;
@@ -29,6 +33,12 @@ public class RemoteControlDemo {
         Stereo stereo=new Stereo();
         StereoOnWithCDCommand stereoOnWithCDCommand=new StereoOnWithCDCommand(stereo);
         StereoOffWithCDCommand stereoOffWithCDCommand= new StereoOffWithCDCommand(stereo);
+        //吊扇
+        CeilingFan ceilingFan=new CeilingFan("liveing  room");
+        CeilingFanHighOnComannd ceilingFanHighOnComannd=new CeilingFanHighOnComannd(ceilingFan);
+        CeilingFanOffOnComannd ceilingFanOffOnComannd=new CeilingFanOffOnComannd(ceilingFan);
+
+        CeilingFanLowOnComannd ceilingFanLowOnComannd=new CeilingFanLowOnComannd(ceilingFan);
 
         //遥控器
         RemoteControl remoteControl=new RemoteControl();
@@ -38,6 +48,7 @@ public class RemoteControlDemo {
         remoteControl.setCommand(0,lightOnCommand,lightOffCommand);
         remoteControl.setCommand(1,garageDoorOnCommand,garageDoorOffCommand);
         remoteControl.setCommand(2,stereoOnWithCDCommand,stereoOffWithCDCommand);
+        remoteControl.setCommand(3,ceilingFanHighOnComannd,ceilingFanOffOnComannd);
 
         System.out.println(remoteControl);
 
@@ -49,6 +60,14 @@ public class RemoteControlDemo {
 
         remoteControl.onButtonWasPressed(2);
         remoteControl.offButtonWasPressed(2);
+
+        remoteControl.onButtonWasPressed(3);
+        remoteControl.offButtonWasPressed(3);
+
+        //吊扇由高速到低速
+//        remoteControl.setCommand(3,ceilingFanHighOnComannd,ceilingFanLowOnComannd);
+//        remoteControl.onButtonWasPressed(3);
+//        remoteControl.offButtonWasPressed(3);
 
         System.out.println(remoteControl);
         remoteControl.undoButtonWasPressed();

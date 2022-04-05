@@ -14,10 +14,10 @@ public class RemoteControl {
 
     //遥控器3个卡槽的出厂默认值
     public RemoteControl() {
-        onCommands=new Command[3];
-        offCommands=new Command[3];
+        onCommands=new Command[4];
+        offCommands=new Command[4];
         Command noCommand=new NoCommand();
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 4; i++) {
             onCommands[i]=noCommand;
             offCommands[i]=noCommand;
         }
