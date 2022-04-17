@@ -74,6 +74,7 @@ public enum Type {
         System.out.println(DataSourceType.SLAVE.ordinal());//索引位置
         DataSourceType.SLAVE.aa();//调用实现的抽象方法
         System.out.println(DataSourceType.valueOf("SLAVE"));
-
+        System.out.println(Type.class.getName());
+        System.out.println(DataSourceType.class.getName());
     }
 }

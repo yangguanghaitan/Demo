@@ -1,5 +1,7 @@
 package guide.collection.map;
 
+import org.junit.Test;
+
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -8,22 +10,16 @@ import java.util.Set;
 /**
  * @Auther d
  * @Date 2022/3/25 10:28
- * @Describe map源码
+ * @Describe Hashmap源码
  **/
 public class MapTest {
-    public static void main(String[] args) {
-//        putMap1();
-        putMap2();
-    }
-
-
-
     /**
      * @author d
      * @date 2022/3/25 19:29
      * @Description HashMap常用方法测试 没有源码分析
      **/
-    public static void putMap2(){
+    @Test
+    public  void putMap2(){
         HashMap<String, String> map = new HashMap<String, String>();
         // 键不能重复，值可以重复
         map.put("san", "张三");
@@ -90,7 +86,8 @@ public class MapTest {
      * @date 2022/3/25 18:20
      * @Description 源码分析 HashMap默认LoadFactor为0.75，初容量2的4次幂，扩容的阈值16*0.75=12,即容量size超过12的时候进行扩容，
      **/
-    public static void putMap1(){
+    @Test
+    public  void putMap1(){
         Map hashMap=new HashMap();
         hashMap.put("a1","1");
         hashMap.put("a2","2");

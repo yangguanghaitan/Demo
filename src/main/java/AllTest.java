@@ -62,9 +62,27 @@ public class AllTest {
 
     }
 
+    @Test
+    public void test(){
+        System.out.print("11\n");
+        System.out.print("22");
+    }
 
 
 
+    /**
+     * @author d
+     * @date 2022/4/13 7:46
+     * @Description while 为true时会一直循环下去
+     **/
+    @Test
+    public void ee(){
+        int x = 10;
+        do{
+            System.out.println("value of x : " + x );
+            x++;
+        }while( x < 20 );
+    }
 
     /**
      * @author d
