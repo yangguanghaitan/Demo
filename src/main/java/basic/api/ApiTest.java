@@ -2,8 +2,12 @@ package basic.api;
 
 import org.junit.Test;
 
+import java.util.Arrays;
 import java.util.Enumeration;
+import java.util.List;
 import java.util.Properties;
+
+import static java.util.Arrays.asList;
 
 /**
  * @Auther d
@@ -12,6 +16,20 @@ import java.util.Properties;
  **/
 
 public class ApiTest {
+
+
+    /**
+     * @author d
+     * @date 2022/6/10 16:20
+     * @Description 测试 {@link Arrays#copyOfRange(java.lang.Object[], int, int)} 复制的内容位置
+     **/
+    @Test
+    public void testArrayscopyOfRange(){
+        String[]  array={"1","3","5","7","8","9"};
+        String[] tempArray = Arrays.copyOfRange(array, 2, array.length);
+        List<String> list = asList(tempArray);
+        System.out.println(list);
+    }
 
     /**
      * @author d
