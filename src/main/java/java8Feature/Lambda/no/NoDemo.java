@@ -12,9 +12,17 @@ public class NoDemo {
         no(noObject);
         //第二种
         no(()-> System.out.println(666));
-
+        //第三种
+        nono().no();
     }
     static void no(NoObject noObject){
         noObject.no();
+    }
+
+    static NoObject nono(){
+
+        return ()->{
+            System.out.println(9090);
+        };
     }
 }
