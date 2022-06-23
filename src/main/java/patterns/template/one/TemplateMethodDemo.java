@@ -1,4 +1,4 @@
-package patterns.template;
+package patterns.template.one;
 
 /**
  * @Auther d
