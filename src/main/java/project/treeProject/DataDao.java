@@ -1,5 +1,7 @@
 package project.treeProject;
 
+import project.treeProject2.DepartmentVo;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,6 +28,24 @@ public class DataDao {
 
         departmentList.add(new Department("301","市场部门","300"));
         departmentList.add(new Department("302","财务部门","300"));
+
+        return departmentList;
+    }
+
+    public static List<DepartmentVo> getDepartmentData2(){
+        List<DepartmentVo> departmentList=new ArrayList<>();
+
+
+        departmentList.add(new DepartmentVo(100L,"若依科技",0L));
+        departmentList.add(new DepartmentVo(200L,"深圳总公司",100L));
+        departmentList.add(new DepartmentVo(300L,"长沙分公司",100L));
+        departmentList.add(new DepartmentVo(201L,"研发部门",200L));
+        departmentList.add(new DepartmentVo(202L,"市场部门",200L));
+        departmentList.add(new DepartmentVo(203L,"测试部门",200L));
+        departmentList.add(new DepartmentVo(204L,"财务部门",200L));
+        departmentList.add(new DepartmentVo(205L,"运维部门",200L));
+        departmentList.add(new DepartmentVo(301L,"市场部门",300L));
+        departmentList.add(new DepartmentVo(302L,"财务部门",300L));
 
         return departmentList;
     }
