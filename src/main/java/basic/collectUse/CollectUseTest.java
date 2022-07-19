@@ -14,15 +14,39 @@ import java.util.stream.Collectors;
 
 public class CollectUseTest {
 
+   //list.stream()中集合的使用
+    @Test
+    public void listStream(){
+        List list=new ArrayList();
+        list.add(34);
+        list.add(78);
+        list.add(67);
+        list.add(100);
+//        list.stream().map()
+        //todo stream的使用
+    }
+
 
     //集合转map,value为空时，报npe
     @Test
     public void collectToMap() {
         List<Person> bookList = new ArrayList<>();
         bookList.add(new Person("jack", "18163138123"));
-        bookList.add(new Person("martin", null));
+        bookList.add(new Person("martin", "111111111"));
         System.out.println(bookList);
-        bookList.stream().collect(Collectors.toMap(Person::getName, Person::getPhoneNumber));
+
+        //key:name,value:Person
+        //Map<String, Person> mapBook = bookList.stream().collect(Collectors.toMap(Person::getName, a -> a));
+
+        //key:name,value:phoneNumber
+        Map<String, String> mapBook = bookList.stream().collect(Collectors.toMap(Person::getName, Person::getPhoneNumber));
+        System.out.println(mapBook);
+
+
+//        Map map=new HashMap();
+//        map.put("11","bb");
+//        map.put("22","bb");
+//        System.out.println(map);
     }
 
     //集合遍历删除，使用iterator(有风险)，推荐java.util.Collection.removeIf
