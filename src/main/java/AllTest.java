@@ -3,6 +3,10 @@ import cn.hutool.http.GlobalHeaders;
 import org.junit.Test;
 
 import java.util.Arrays;
+import java.util.Enumeration;
+import java.util.Iterator;
+import java.util.Vector;
+import java.util.function.Consumer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -69,6 +73,50 @@ public class AllTest {
     }
 
 
+    /**
+     * @author d
+     * @date 2022/6/11 20:06
+     * @Description Vector集合的遍历是否有序
+     **/
+    @Test
+    public void ff(){
+        Vector<String> t=new Vector<String>();
+        t.add("F");
+        t.add("o");
+        t.add("r");
+        t.add("e");
+        t.add("v");
+        t.add("e");
+        t.add("r");
+        //第一种
+        for (String string : t) {
+            System.err.print(string);
+        }
+        //第二种
+        t.forEach(new Consumer<String>() {
+            @Override
+            public void accept(String t) {
+                // TODO Auto-generated method stub
+                System.out.print(t);
+            }
+        });
+        //第三种
+        for (int i = 0; i < t.size(); i++) {
+            System.out.print(t.get(i));
+        }
+        //第四种
+        Iterator<String> it = t.iterator();
+        while (it.hasNext()) {
+            String string = (String) it.next();
+            System.err.print(string);
+        }
+        //第五种
+        Enumeration<String> enume = t.elements();
+        while(enume.hasMoreElements()){
+            System.out.print(enume.nextElement().toString());
+        }
+
+    }
 
     /**
      * @author d

@@ -45,8 +45,8 @@
     });
     console.log(11);
     jQuery.support.cors = true;
-    var request = new XMLHttpRequest();
-    request.open('GET', 'http://www.baidu.com/', false);
+    var request = new  XMLHttpRequest();
+    request.open('GET', 'https://www.baidu.com/', false);
     request.send(null);
     if (request.status === 200) {
         console.log(request.responseText);

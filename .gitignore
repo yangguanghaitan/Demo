@@ -1,5 +1,6 @@
 # Compiled class file
 *.class
+!ClassLoaderTest.class
 
 # Log file
 *.log
@@ -26,3 +27,4 @@ hs_err_pid*
 /src/main/resources/flowchart.js
 /.idea/
 /src/main/resources/aa.txt
+/src/main/resources/a.json
