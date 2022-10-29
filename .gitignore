@@ -28,3 +28,4 @@ hs_err_pid*
 /.idea/
 /src/main/resources/aa.txt
 /src/main/resources/a.json
+/quartz-2.3.0-distribution/
