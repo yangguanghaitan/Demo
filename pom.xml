@@ -68,6 +68,13 @@
             <artifactId>quartz</artifactId>
             <version>2.3.2</version>
         </dependency>
+<!--        测试Transcational事务用这个包-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.16</version>
+            <scope>runtime</scope>
+        </dependency>
     </dependencies>
 
 
