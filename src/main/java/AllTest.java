@@ -1,11 +1,13 @@
 
 import cn.hutool.http.GlobalHeaders;
+import org.apache.commons.lang3.concurrent.BasicThreadFactory;
 import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.Vector;
+import java.util.concurrent.*;
 import java.util.function.Consumer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -72,6 +74,26 @@ public class AllTest {
         System.out.print("22");
     }
 
+
+    /**
+     * @author d
+     * @date 2023/4/10 17:19
+     * @Description 测试commons-lang3的线程工厂
+     **/
+    @Test
+    public void gg(){
+//        ThreadFactory namedThreadFactory = new
+        String aa1 = String.join("-", "ggThreadPool", "%s");
+        BasicThreadFactory namedThreadFactory = new BasicThreadFactory.Builder().namingPattern(aa1).build();
+
+        //Common Thread Pool
+        ExecutorService pool = new ThreadPoolExecutor(5, 200,0L, TimeUnit.MILLISECONDS,new LinkedBlockingQueue<Runnable>(1024), namedThreadFactory, new ThreadPoolExecutor.AbortPolicy());
+
+        for (int i = 0; i < 10; i++) {
+          pool.execute(()-> System.out.println(Thread.currentThread().getName()));
+        }
+        pool.shutdown();
+    }
 
     /**
      * @author d
