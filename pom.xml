@@ -75,6 +75,19 @@
             <version>8.0.16</version>
             <scope>runtime</scope>
         </dependency>
+        <!--        测试队列 Disruptor:包名 project.queueDisruptor-->
+        <dependency>
+            <groupId>com.lmax</groupId>
+            <artifactId>disruptor</artifactId>
+            <version>3.4.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+
     </dependencies>
 
 
