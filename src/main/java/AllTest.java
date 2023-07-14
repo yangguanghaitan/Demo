@@ -3,10 +3,7 @@ import cn.hutool.http.GlobalHeaders;
 import org.apache.commons.lang3.concurrent.BasicThreadFactory;
 import org.junit.Test;
 
-import java.util.Arrays;
-import java.util.Enumeration;
-import java.util.Iterator;
-import java.util.Vector;
+import java.util.*;
 import java.util.concurrent.*;
 import java.util.function.Consumer;
 import java.util.regex.Matcher;
@@ -21,6 +18,12 @@ public class AllTest {
 
 
     public static void main(String[] args) throws Exception {
+      /*  List list=new ArrayList();
+        int i=0;
+        while (true){
+         i++;
+         list.add(1);
+        }*/
 
       /*  RandomAccessFile rw = new RandomAccessFile(new File("asd.txt"), "rw");
         FileChannel channel = rw.getChannel();
@@ -61,9 +64,17 @@ public class AllTest {
                 }
             }
         },"bbb").start();*/
-        GlobalHeaders.INSTANCE.headers();
-        GlobalHeaders.values();
+//        GlobalHeaders.INSTANCE.headers();
+//        GlobalHeaders.values();
 
+
+        for (int i = 0; i < 10; i++) {
+            if (i==3){
+                break;
+            }
+            System.out.println(i);
+        }
+        System.out.println("ddd");
 
 
     }
@@ -74,6 +85,22 @@ public class AllTest {
         System.out.print("22");
     }
 
+
+
+    /**
+     * @author d
+     * @date 2023/7/14 14:34
+     * @Description  测试null的情况
+     **/
+    @Test
+    public void hh(){
+        int bb=getValue();//报异常
+        System.out.println(getValue()+1);//报异常
+
+    }
+    public Integer getValue(){
+        return null;
+    }
 
     /**
      * @author d
