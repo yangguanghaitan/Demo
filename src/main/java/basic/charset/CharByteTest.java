@@ -9,7 +9,7 @@ public class CharByteTest {
 
     public static void main(String[] args) throws Exception {
         // 第二个字符为BMP之外的字符，csdn编辑器无法显示该字符，可以在运行结果截图中看到
-        String[] strArr = {"中", "��", "a", "aa"};
+        String[] strArr = {"中", "��", "a", "com/wgcloud/aa"};
         String[] charsetArr = {"gbk", "utf-8", "utf-16", "gb2312","Unicode"};
         for(String str : strArr) {
             System.out.println(str);

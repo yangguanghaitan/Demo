@@ -29,7 +29,7 @@ public class GetAndAcceptDemo {
     //可以
     public static LamFunction test2() {
         return ab -> {
-            ab.put("aa", "bb");
+            ab.put("com/wgcloud/aa", "bb");
             ArrayList<Object> list = new ArrayList<>();
             list.add(ab);
             return list;
