@@ -3,7 +3,7 @@ package algorithm.linklist;
 /**
  * @Auther d
  * @Date 2024/3/18 14:12
- * @Describe BM1反转链表
+ * @Describe BM1反转链表 简单
  **/
 public class ReverseListNode01 {
     public static void main(String[] args) {
