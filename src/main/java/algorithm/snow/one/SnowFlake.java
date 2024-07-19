@@ -1,4 +1,4 @@
-package algorithm.snow;
+package algorithm.snow.one;
 
 /**
  * @Auther d

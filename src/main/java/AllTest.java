@@ -1,5 +1,6 @@
 
 import cn.hutool.http.GlobalHeaders;
+import jvm.Person;
 import org.apache.commons.lang3.concurrent.BasicThreadFactory;
 import org.junit.Test;
 
@@ -8,6 +9,7 @@ import java.util.concurrent.*;
 import java.util.function.Consumer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 /**
  * @author d
@@ -85,6 +87,25 @@ public class AllTest {
         System.out.print("22");
     }
 
+
+    @Test
+    public void testMap(){
+        Map<Integer,String> map=new ConcurrentHashMap();
+        String s = map.computeIfAbsent(22, k -> new Date() + "666");
+        System.out.println(s);
+
+        Person person1=new Person(41,"d");
+        Person person2=new Person(12,"f");
+        Person person3=new Person(51,"a");
+
+        List<Person> list=new ArrayList<>();
+        list.add(person1);
+        list.add(person2);
+        list.add(person3);
+
+        Set<Integer> collect = list.stream().map(Person::getAge).collect(Collectors.toSet());
+        System.out.println(collect);
+    }
 
 
     /**
