@@ -31,4 +31,30 @@ public class Tools {
         }
         return 0L;
     }
+    //获取10进制转化为二进制后的二进制数和二进制位数
+    public static String getTwoBinaryAndBitLengthByTen(long tenBinary){
+        String s = Long.toBinaryString(tenBinary);
+        return tenBinary+"这个数的二进制是"+s+",共有"+s.length()+"位";
+    }
+    //求已知bit位数的最大值，符号位位0,假如3位，结果表示0b1000-1
+    public static long getMaxByBitLength(long bitLength){
+        return ((1L<<bitLength)-1);
+    }
+    //求已知bit位数的最大值，符号位位0，假如3位，结果表示000000...0111
+    public static long getMax2ByBitLength(long bitLength){
+        return ~(-1L<<bitLength);
+    }
+    //分开主从workId后的，已知workIdBitLength时主分区的workIdBound的获取方法
+    public static long  getWorkIdBound(long workIdBitLength){
+        return 1L<<(workIdBitLength-1);//return ~(-1<<(workIdBitLength-1))+1;
+    }
+    //已知seqBitLength，获取对应位数的掩码
+    public static long getMaskBySeqBitLength(long seqBitLength){
+        return ~(-1L<<seqBitLength);//return (1L<<seqBitLength)-1;
+    }
+
+    //已知机器id的bit位数获取workIdBound
+//    public static long getWorkIdBound(long workIdBitLength){
+//        return (1L<<workIdBitLength)-1;
+//    }
 }

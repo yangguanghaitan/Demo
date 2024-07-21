@@ -32,6 +32,6 @@ public class TimeTest {
      * @Description 计算自1577808000000L开始,时间戳后bitPosition bit位相同的时间戳
      **/
     public long nextSameBit(int bitPosition) {
-
+        return 0L;
     }
 }
