@@ -4,6 +4,8 @@ import org.junit.Test;
 import utils.Tools;
 
 import java.sql.Timestamp;
+import java.time.LocalDate;
+import java.time.ZoneId;
 
 /**
  * @Auther d
@@ -18,7 +20,8 @@ public class TimeTest {
         System.out.println(Long.toBinaryString(1577808000000L));
         System.out.println(Long.toBinaryString(3776831255552L).substring(1));
         System.out.println(Long.toBinaryString(3776831255552L - 1577808000000L - 1));
-
+        System.out.println(LocalDate.of(2000, 1, 1).atStartOfDay(ZoneId.of("Z")).toEpochSecond());
+        System.out.println(Tools.getLongTimeByStrdate("2000-01-01") - Tools.getLongTimeByStrdate("1970-01-01"));
     }
 
     @Test
